@@ -30,6 +30,7 @@ boolean sticky = false; //Enables all the other channels (acts as levels)
 
 
 
+
 void setup()
 {
   Serial.begin(9600);//  setup serial
@@ -52,15 +53,18 @@ void loop()
   if (val >= Ch1Trigger && val < Ch2Trigger)
   {
     digitalWrite(Ch1, HIGH); 
+    Serial.println("Level 1 Detected");
   }else if (val >= Ch2Trigger && val < Ch3Trigger)
   {
     digitalWrite(Ch2, HIGH);
+    Serial.println("Level 2 Detected");
     if (sticky){
        digitalWrite(Ch1, HIGH);
     }
   }else if (val >= Ch3Trigger && val < Ch4Trigger)
   {
-    digitalWrite(Ch1, HIGH);
+    digitalWrite(Ch3, HIGH);
+    Serial.println("Level 3 Detected");
     if (sticky){
        digitalWrite(Ch1, HIGH);
        digitalWrite(Ch2, HIGH);
@@ -68,6 +72,7 @@ void loop()
   }else if (val >= Ch4Trigger && val < Ch5Trigger)
   {
     digitalWrite(Ch4, HIGH);
+    Serial.println("Level 4 Detected");
     if (sticky){
        digitalWrite(Ch1, HIGH);
        digitalWrite(Ch2, HIGH);
@@ -76,6 +81,7 @@ void loop()
   }else if (val >= Ch5Trigger && val < Ch6Trigger)
   {
     digitalWrite(Ch5, HIGH);
+    Serial.println("Level 5 Detected");
     if (sticky){
        digitalWrite(Ch1, HIGH);
        digitalWrite(Ch2, HIGH);
@@ -85,6 +91,7 @@ void loop()
   }else if (val >= Ch6Trigger && val < Ch7Trigger)
   {
     digitalWrite(Ch6, HIGH);
+    Serial.println("Level 6 Detected");
     if (sticky){
        digitalWrite(Ch1, HIGH);
        digitalWrite(Ch2, HIGH);
@@ -95,6 +102,7 @@ void loop()
   }else if (val >= Ch7Trigger && val < Ch8Trigger)
   {
     digitalWrite(Ch7, HIGH);
+    Serial.println("Level 7 Detected");
     if (sticky){
        digitalWrite(Ch1, HIGH);
        digitalWrite(Ch2, HIGH);
@@ -106,6 +114,7 @@ void loop()
   }else if (val >= Ch8Trigger)
   {
     digitalWrite(Ch8, HIGH);
+    Serial.println("Level 8 Detected");
     if (sticky){
        digitalWrite(Ch1, HIGH);
        digitalWrite(Ch2, HIGH);
