@@ -49,23 +49,23 @@ void loop()
   val = analogRead(analogPin);     // read the input pin
   Serial.println(val);// debug value
   
-  if (val >= Ch1Trigger)
+  if (val >= Ch1Trigger && val < Ch2Trigger)
   {
     digitalWrite(Ch1, HIGH); 
-  }else if (val >= Ch2Trigger)
+  }else if (val >= Ch2Trigger && val < Ch3Trigger)
   {
     digitalWrite(Ch2, HIGH);
     if (sticky){
        digitalWrite(Ch1, HIGH);
     }
-  }else if (val >= Ch3Trigger)
+  }else if (val >= Ch3Trigger && val < Ch4Trigger)
   {
     digitalWrite(Ch1, HIGH);
     if (sticky){
        digitalWrite(Ch1, HIGH);
        digitalWrite(Ch2, HIGH);
     } 
-  }else if (val >= Ch4Trigger)
+  }else if (val >= Ch4Trigger && val < Ch5Trigger)
   {
     digitalWrite(Ch4, HIGH);
     if (sticky){
@@ -73,7 +73,7 @@ void loop()
        digitalWrite(Ch2, HIGH);
        digitalWrite(Ch3, HIGH);
     }  
-  }else if (val >= Ch5Trigger)
+  }else if (val >= Ch5Trigger && val < Ch6Trigger)
   {
     digitalWrite(Ch5, HIGH);
     if (sticky){
@@ -82,7 +82,7 @@ void loop()
        digitalWrite(Ch3, HIGH);
        digitalWrite(Ch4, HIGH);
     } 
-  }else if (val >= Ch6Trigger)
+  }else if (val >= Ch6Trigger && val < Ch7Trigger)
   {
     digitalWrite(Ch6, HIGH);
     if (sticky){
@@ -92,7 +92,7 @@ void loop()
        digitalWrite(Ch4, HIGH);
        digitalWrite(Ch5, HIGH);
     }  
-  }else if (val >= Ch7Trigger)
+  }else if (val >= Ch7Trigger && val < Ch8Trigger)
   {
     digitalWrite(Ch7, HIGH);
     if (sticky){
