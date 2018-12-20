@@ -17,14 +17,14 @@ int Ch6 = 8;
 int Ch7 = 9;
 int Ch8 = 10;
 
-int Ch1Trigger = 31;
-int Ch2Trigger = 62;
-int Ch3Trigger = 93;
-int Ch4Trigger = 124;
-int Ch5Trigger = 155;
-int Ch6Trigger = 186;
-int Ch7Trigger = 217;
-int Ch8Trigger = 255;
+int Ch1Trigger = 100;
+int Ch2Trigger = 300;
+int Ch3Trigger = 400;
+int Ch4Trigger = 500;
+int Ch5Trigger = 700;
+int Ch6Trigger = 800;
+int Ch7Trigger = 900;
+int Ch8Trigger = 1023;
 
 boolean sticky = false; //Enables all the other channels (acts as levels)
 
